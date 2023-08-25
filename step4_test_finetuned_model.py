@@ -13,7 +13,7 @@ def main():
         temperature=0.0,
         messages=[
             {"role": "system", "content": "You are a helpful and professional customer service representative for a multiple listing service"},
-            {"role": "user", "content": "dude... what is name? i forgot my password."},
+            {"role": "user", "content": "dude... i forgot my password."},
         ]
     )
 
