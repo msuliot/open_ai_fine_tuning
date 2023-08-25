@@ -38,29 +38,32 @@ OPENAI_API_KEY='your key here'
     ```
     - This will return a "id" which you will need for the next step
 
+3. ** Step 3: File Validation at OpenAI **
     - You should check the status of your fine tuning file by running the following command
     - You will not be able to proceed to the next step until the status is "processed"
     ```bash
-    python3 step2_file_validation.py
+    python3 step3_file_validation.py
     ```
 
-3. ** Step 3: Create job for Fine Tuned Model **
-    - Using the ID from step 2, update the "TRAINING_FILE_ID" variable in step3_create_finetuned_model.py
+4. ** Step 4: Create job for Fine Tuned Model at OpenAI **
+    - Using the ID from step 2 or 3, update the "TRAINING_FILE_ID" variable in step3_create_finetuned_model.py
     - Run the following command to create your fine tuned model
     ```bash
-    python3 step3_create_finetuned_model.py
+    python3 step4_create_finetuned_model.py
     ```
+
+5. ** Step 5: Model Validation at OpenAI **
     - You should check the status of your fine tuned model by running the following command
     - You will not be able to proceed to the next step until the status is "succeeded" and Fine Tuned Model has a value.
     - This could take some time based on where you are in the queue
-    - You will also receive an email from OpenAI when the model is ready
+    - You will also receive an email from OpenAI when the model is ready or run the following command to check the status
     ```bash
-    python3 step3_model_validation.py
+    python3 step5_model_validation.py
     ```
 
-4. ** Step 4: Test New Model  **
-    - Using the Fine Tuned Model ID from step 3, update the "FINE_TUNED_MODEL_ID" variable in step4_test_finetuned_model.py
+6. ** Step 6: Test New Model  **
+    - Using the Fine Tuned Model ID from step 4 or 5, update the "FINE_TUNED_MODEL_ID" variable in step4_test_finetuned_model.py
     - Run the following command to test your new model
     ```bash
-    python3 step4_test_finetuned_model.py
+    python3 step6_test_finetuned_model.py
     ```
