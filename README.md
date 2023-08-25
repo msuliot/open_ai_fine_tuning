@@ -23,7 +23,7 @@ OPENAI_API_KEY='your key here'
 
 ## Instructions:
 
-1. ** Step 1: Fine Tuning File **
+1. ## Step 1: Fine Tuning File 
     - Your fine tuning file must in the the format of JSON Lines (jsonl) 
     - Sample file is provided in the repository
     - Run the following command to validate your file is in the proper JSON Lines format for OpenAI
@@ -31,7 +31,7 @@ OPENAI_API_KEY='your key here'
     python3 step1_validate_finetune_file.py
     ```
 
-2. ** Step 2: Upload File to OpenAI **
+2. ## Step 2: Upload File to OpenAI 
     - Run the following command to upload your file to OpenAI
     ```bash
     python3 step2_upload_file.py
