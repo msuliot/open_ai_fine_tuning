@@ -21,39 +21,40 @@ Create a ".env" file and put your OpenAI key in that file
 OPENAI_API_KEY='your key here'
 ```
 
-# Instructions:
+## Instructions:
 
 1. ** Step 1: Fine Tuning File **
-   - Your fine tuning file must in the the format of JSON Lines (jsonl) 
-   - Sample file is provided in the repository
-   - Run the following command to validate your file is in the proper JSON Lines format for OpenAI
-   ```bash
+    - Your fine tuning file must in the the format of JSON Lines (jsonl) 
+    - Sample file is provided in the repository
+    - Run the following command to validate your file is in the proper JSON Lines format for OpenAI
+    ```bash
     python3 step1_validate_finetune_file.py
     ```
 
 2. ** Step 2: Upload File to OpenAI **
-   - Run the following command to upload your file to OpenAI
-   ```bash
+    - Run the following command to upload your file to OpenAI
+    ```bash
     python3 step2_upload_file.py
     ```
-   - This will return a "id" which you will need for the next step
+    - This will return a "id" which you will need for the next step
 
-   - You should check the status of your fine tuning file by running the following command
-   - You will not be able to proceed to the next step until the status is "processed"
-   ```bash
+    - You should check the status of your fine tuning file by running the following command
+    - You will not be able to proceed to the next step until the status is "processed"
+    ```bash
     python3 step2_validation.py
     ```
 
 3. ** Step 3: Create job for Fine Tuned Model **
-   - Run the following command to create your fine tuned model
-   ```bash
+    - Using the ID from step 2, update the "TRAINING_FILE_ID" variable in step3_create_finetuned_model.py
+    - Run the following command to create your fine tuned model
+    ```bash
     python3 step3_create_finetuned_model.py
     ```
-   - You should check the status of your fine tuned model by running the following command
-   - You will not be able to proceed to the next step until the status is "succeeded" and Fine Tuned Model has a value.
-   - This could take some time based on where you are in the queue
-   - You will also receive an email from OpenAI when the model is ready
-   ```bash
+    - You should check the status of your fine tuned model by running the following command
+    - You will not be able to proceed to the next step until the status is "succeeded" and Fine Tuned Model has a value.
+    - This could take some time based on where you are in the queue
+    - You will also receive an email from OpenAI when the model is ready
+    ```bash
     python3 step3_validation.py
     ```
 
