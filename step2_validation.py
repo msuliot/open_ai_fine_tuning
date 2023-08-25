@@ -16,6 +16,11 @@ def pretty_table(f):
         print(f"{file['id']:<33} {file['purpose']:<20} {file['status']:<12} {created_at}")
 
 
-file_list = openai.File.list()
-# print(file_list)
-pretty_table(file_list)
+def main():
+    file_list = openai.File.list()
+    # print(file_list)
+    pretty_table(file_list)
+
+
+if __name__ == "__main__":
+    main()

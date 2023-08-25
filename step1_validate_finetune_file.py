@@ -10,10 +10,15 @@ def read_from_jsonl(filename):
         print("Error reading file, invalid format: ", e)
         return []
 
-# Read from JSONL
-read_data = read_from_jsonl('data.jsonl')
 
-for record in read_data:
-    print(record)
+def main():
+    # Read data from jsonl file
+    read_data = read_from_jsonl('data.jsonl')
 
+    for record in read_data:
+        print(record)
+
+
+if __name__ == "__main__":
+    main()
 
