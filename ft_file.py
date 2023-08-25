@@ -9,24 +9,12 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 import json
 
 def write_to_jsonl(data, filename):
-    """
-    Writes a list of dictionaries to a JSONL file.
-    
-    :param data: List of dictionaries to write
-    :param filename: Name of the JSONL file
-    """
-    with open(filename, 'w') as file:
+    with open(filename, 'a') as file:
         for item in data:
             file.write(json.dumps(item) + '\n')
 
 
 def read_from_jsonl(filename):
-    """
-    Reads data from a JSONL file.
-    
-    :param filename: Name of the JSONL file
-    :return: List of dictionaries
-    """
     with open(filename, 'r') as file:
         lines = file.readlines()
 
@@ -34,7 +22,8 @@ def read_from_jsonl(filename):
 
 
 # # Write to JSONL
-# write_to_jsonl(data_sample, 'data.jsonl')
+data_sample = [{"messages": [{"role": "system", "content": "Your name is Aiden, You are a customer service representative for a multiple listing service"}, {"role": "user", "content": "Do I have to have a photo of my listing?"}, {"role": "assistant", "content": "Yes, you need to have a photo of your listing within 4 days of listing it."}]}]
+write_to_jsonl(data_sample, 'a_data.jsonl')
 
 # Read from JSONL
 # read_data = read_from_jsonl('data.jsonl')
@@ -49,25 +38,31 @@ def read_from_jsonl(filename):
 # file_id = ft_file["id"]
 # print(file_id)
 
-######## need a pause for 10 sedonds to get the file_id
+
+
+######## need a pause for 10 sec to get the file_id
 
 # ft_job = openai.FineTuningJob.create(training_file="file-bNGU6NTjh5bWT7LgkWWgbpG9", model="gpt-3.5-turbo-0613")
 # print(ft_job)
 
 
 
-completion = openai.ChatCompletion.create(
-  model="ft:gpt-3.5-turbo-0613:michael-ai::7rDDeuYa",
-  temperature=0.0,
-  messages=[
-    {"role": "system", "content": "your name is Aiden, You are a customer service representative for the arizona regional Multiple listing service"},
-    {"role": "user", "content": "thanks for your help, what was your name again?"},
-  ]
-)
+# completion = openai.ChatCompletion.create(
+#   model="ft:gpt-3.5-turbo-0613:michael-ai::7rDDeuYa",
+#   temperature=0.0,
+#   messages=[
+#     {"role": "system", "content": "your name is Aiden, You are a customer service representative for the arizona regional Multiple listing service"},
+#     {"role": "user", "content": "thanks for your help, what was your name again?"},
+#   ]
+# )
 
-print(completion.choices[0].message)
+# print(completion.choices[0].message)
 
 
+
+openai.File.delete("file-HI2ZW6ApWpTWC2GrAsbwOlBi")
+# f = openai.File.list()
+# print(f)    
 
 # List 10 fine-tuning jobs
 # jobs = openai.FineTuningJob.list(limit=10)
