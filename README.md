@@ -41,7 +41,7 @@ OPENAI_API_KEY='your key here'
     - You should check the status of your fine tuning file by running the following command
     - You will not be able to proceed to the next step until the status is "processed"
     ```bash
-    python3 step2_validation.py
+    python3 step2_file_validation.py
     ```
 
 3. ** Step 3: Create job for Fine Tuned Model **
@@ -55,7 +55,7 @@ OPENAI_API_KEY='your key here'
     - This could take some time based on where you are in the queue
     - You will also receive an email from OpenAI when the model is ready
     ```bash
-    python3 step3_validation.py
+    python3 step3_model_validation.py
     ```
 
 4. ** Step 4: Test New Model  **

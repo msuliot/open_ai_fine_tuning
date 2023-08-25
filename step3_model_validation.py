@@ -13,13 +13,16 @@ def pretty_table(f):
     print('-' * 140)
     for job in f['data']:
         created_at = datetime.datetime.fromtimestamp(job['created_at']).strftime('%Y-%m-%d %H:%M:%S')
-        finished_at = datetime.datetime.fromtimestamp(job['finished_at']).strftime('%Y-%m-%d %H:%M:%S')
-        
+        finished_at = ""
+        if job['finished_at']:
+            finished_at = datetime.datetime.fromtimestamp(job['finished_at']).strftime('%Y-%m-%d %H:%M:%S')
+
         print(f"{job['id']:<33} {created_at:<22} {finished_at:<22} {job['status']:<13} {job['fine_tuned_model']} ")
 
 
 def main():
     job_list = openai.FineTuningJob.list(limit=10)
+    # print(job_list)
     pretty_table(job_list)
 
 
