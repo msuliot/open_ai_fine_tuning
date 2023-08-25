@@ -1,4 +1,4 @@
-# Getting Interviewed by AI
+# Open AI Fine Tuning
 
 ## The basics
 
