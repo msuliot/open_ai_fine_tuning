@@ -23,7 +23,7 @@ OPENAI_API_KEY='your key here'
 
 ## Instructions:
 
-## Step 1: Fine Tuning File 
+1. ** Step 1: Fine Tuning File **
     - Your fine tuning file must in the the format of JSON Lines (jsonl) 
     - Sample file is provided in the repository
     - Run the following command to validate your file is in the proper JSON Lines format for OpenAI
@@ -31,28 +31,28 @@ OPENAI_API_KEY='your key here'
     python3 step1_validate_finetune_file.py
     ```
 
-## Step 2: Upload File to OpenAI 
+2. ** Step 2: Upload File to OpenAI **
     - Run the following command to upload your file to OpenAI
     ```bash
     python3 step2_upload_file.py
     ```
     - This will return a "id" which you will need for the next step
 
-## Step 3: File Validation at OpenAI
+3. ** Step 3: File Validation at OpenAI **
     - You should check the status of your fine tuning file by running the following command
     - You will not be able to proceed to the next step until the status is "processed"
     ```bash
     python3 step3_file_validation.py
     ```
 
-## Step 4: Create job for Fine Tuned Model at OpenAI
+4. ** Step 4: Create job for Fine Tuned Model at OpenAI **
     - Using the ID from step 2 or 3, update the "TRAINING_FILE_ID" variable in step3_create_finetuned_model.py
     - Run the following command to create your fine tuned model
     ```bash
     python3 step4_create_finetuned_model.py
     ```
 
-## Step 5: Model Validation at OpenAI
+5. ** Step 5: Model Validation at OpenAI **
     - You should check the status of your fine tuned model by running the following command
     - You will not be able to proceed to the next step until the status is "succeeded" and Fine Tuned Model has a value.
     - This could take some time based on where you are in the queue
@@ -61,7 +61,7 @@ OPENAI_API_KEY='your key here'
     python3 step5_model_validation.py
     ```
 
-## Step 6: Test New Model
+6. ** Step 6: Test New Model  **
     - Using the Fine Tuned Model ID from step 4 or 5, update the "FINE_TUNED_MODEL_ID" variable in step4_test_finetuned_model.py
     - Run the following command to test your new model
     ```bash
