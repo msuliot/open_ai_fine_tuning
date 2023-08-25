@@ -1,1 +1,1 @@
-openai --upgrade
+openai

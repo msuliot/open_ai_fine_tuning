@@ -7,11 +7,11 @@ load_dotenv()
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
 completion = openai.ChatCompletion.create(
-  model="ft:gpt-3.5-turbo-0613:michael-ai::7rFvNGY4",
+  model="Fine_Tuned_Model_ID_HERE",
   temperature=0.0,
   messages=[
-    {"role": "system", "content": "Your name is Aiden, You are a customer service representative for a multiple listing service"},
-    {"role": "user", "content": "How can I reactivate my expired listing?"},
+    {"role": "system", "content": "You are a helpful and professional customer service representative for a multiple listing service"},
+    {"role": "user", "content": "dude... what is name? i forgot my password."},
   ]
 )
 
