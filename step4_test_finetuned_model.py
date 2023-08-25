@@ -7,7 +7,7 @@ load_dotenv()
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
 completion = openai.ChatCompletion.create(
-  model="Fine_Tuned_Model_ID_HERE",
+  model="FINE_TUNED_MODEL_ID",
   temperature=0.0,
   messages=[
     {"role": "system", "content": "You are a helpful and professional customer service representative for a multiple listing service"},

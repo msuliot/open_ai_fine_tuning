@@ -59,6 +59,7 @@ OPENAI_API_KEY='your key here'
     ```
 
 4. ** Step 4: Test New Model  **
+    - Using the Fine Tuned Model ID from step 3, update the "FINE_TUNED_MODEL_ID" variable in step4_test_finetuned_model.py
     - Run the following command to test your new model
     ```bash
     python3 step4_test_finetuned_model.py
