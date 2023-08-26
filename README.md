@@ -67,3 +67,13 @@ OPENAI_API_KEY='your key here'
     ```bash
     python3 step6_test_finetuned_model.py
     ```
+
+##  ** Clean Up: Delete Files and Fine Tuned Models **
+    - Use the cleanup file to list all files and models
+    - Delete your files 
+    - Delete your fine tuned models
+    - Download files
+    - commands are commented out in the botton of the file
+    ```bash
+    python3 cleanup.py
+    ```
