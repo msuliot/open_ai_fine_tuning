@@ -9,7 +9,7 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 
 
 def pretty_table(f):
-    print(f"{'ID':<33} {'Created At':<22} {'Finished At':<22} {'Status':<13} {'Fine Tuned Model'} ")
+    print(f"\n{'ID':<33} {'Created At':<22} {'Finished At':<22} {'Status':<13} {'Fine Tuned Model'} ")
     print('-' * 140)
     for job in f['data']:
         created_at = datetime.datetime.fromtimestamp(job['created_at']).strftime('%Y-%m-%d %H:%M:%S')

@@ -9,7 +9,7 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 
 
 def pretty_table(f):
-    print(f"{'ID':<33} {'Purpose':<20} {'Status':<12} {'Created At'}")
+    print(f"\n{'ID':<33} {'Purpose':<20} {'Status':<12} {'Created At'}")
     print('-' * 88)
     for file in f['data']:
         created_at = datetime.datetime.fromtimestamp(file['created_at']).strftime('%Y-%m-%d %H:%M:%S')
