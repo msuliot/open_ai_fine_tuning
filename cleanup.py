@@ -59,10 +59,6 @@ def list_models():
         print(model['status'], model['fine_tuned_model'])
 
 
-
-list_files()
-list_models()
-
 # delete_file("file-5tZ09GT4pGuTAYuBmRHjYgGO")  
 # delete_all_files()
 #  
@@ -70,3 +66,6 @@ list_models()
 # delete_all_models()
 #
 # download_file("file-O4IZuDzXVaPvE5XUPdZpwKJg","down.jsonl")
+
+list_files()
+list_models()
