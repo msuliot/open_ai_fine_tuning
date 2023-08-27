@@ -68,6 +68,14 @@ OPENAI_API_KEY='your key here'
     python3 step6_test_finetuned_model.py
     ```
 
+## Full Automatic
+- Full automatic will run the entire process from start to finish
+
+    ```bash
+    python3 full_automatic.py
+    ```
+
+
 ##  Clean Up: Delete Files and Fine Tuned Models
 - Use the cleanup.py file to list all files and models
 - Delete your files 
