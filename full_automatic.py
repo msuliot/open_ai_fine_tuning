@@ -78,11 +78,9 @@ while True:
     print(f"Waiting for file to be processed... {looptime}")
     file_status = openai.File.retrieve(file_id)
     if file_status["status"] == "processed":
-        print(f"File processed: {file_status['id']}")
+        print(f"\nFile processed: {file_status['id']}")
         break
     time.sleep(5)
-
-print("\nFile processed\n")
 
 
 looptime = 0
@@ -97,7 +95,7 @@ while True:
         break
     time.sleep(30)
 
-print(f"Model created: {model_id}")
+print(f"\nModel created: {model_id}")
 
 # Step 6: Test the model
 print("\nTesting the model\n")
