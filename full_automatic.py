@@ -11,18 +11,15 @@ load_dotenv()
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
 
-def read_from_jsonl(filename):
+def validate_file(filename):
     try:
         with open(filename, 'r') as file:
             lines = file.readlines()
+            the_file = [json.loads(line) for line in lines]
             return True
     except Exception as e:
         print("Error reading file, invalid format: ", e)
         return False
-    
-
-def validate_file():
-    return read_from_jsonl('data.jsonl')
 
 
 def upload_file():
@@ -54,10 +51,12 @@ def test_model(model_id, prompt):
 
 def main():
     # Validate the file
-    is_file_valid = validate_file()
+    is_file_valid = validate_file("data.jsonl")
     if is_file_valid == False:
         print("File is not valid")
         sys.exit()
+
+    print("\nFile is valid and now uploading...\n")
 
     # Upload the file and wait for it to be processed
     file_id = upload_file()
