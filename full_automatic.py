@@ -62,25 +62,25 @@ def main():
     file_id = upload_file()
     looptime = 0
     while True:
-        looptime += 1
         print(f"Waiting for OpenAI to process the file... {looptime}")
         file_status = openai.File.retrieve(file_id)
         if file_status["status"] == "processed":
             print(f"\nFile processed: {file_status['id']}\n")
             break
+        looptime += 5
         time.sleep(5)
 
     # Create the finetuned model and wait for it to be processed
-    looptime = 0
     fine_tuning_job = create_model(file_id)
     model_id = ""
+    looptime = 0
     while True:
-        looptime += 1
         print(f"Waiting for OpenAI to create the model... {looptime}")
         model_status = openai.FineTuningJob.retrieve(fine_tuning_job)
         if model_status["status"] == "succeeded":
             model_id = model_status["fine_tuned_model"]
             break
+        looptime += 30
         time.sleep(30)
 
     print(f"\nModel created: {model_id}")
