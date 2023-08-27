@@ -89,7 +89,9 @@ def main():
 
     # Test the model
     print("\nTesting the new OpenAI model\n")
-    test_model(model_id, "Where do I mail my check?") 
+    prompt = "Where do I mail my check?"
+    print(f"Prompt: {prompt}")
+    test_model(model_id, prompt) 
 
 
 if __name__ == "__main__":
