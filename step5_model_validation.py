@@ -21,7 +21,7 @@ def pretty_table(f):
 
 
 def main():
-    job_list = openai.FineTuningJob.list(limit=10)
+    job_list = openai.FineTuningJob.list(limit=25)
     # print(job_list)
     pretty_table(job_list)
 

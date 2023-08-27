@@ -17,7 +17,7 @@ def pretty_table(f):
 
 
 def main():
-    file_list = openai.File.list()
+    file_list = openai.File.list(limit=25)
     # print(file_list)
     pretty_table(file_list)
 
