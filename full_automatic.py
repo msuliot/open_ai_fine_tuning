@@ -89,7 +89,7 @@ def main():
 
     # Test the model
     print("\nTesting the new OpenAI model\n")
-    test_model(model_id, "Where do i mail my check?") 
+    test_model(model_id, "Where do I mail my check?") 
 
 
 if __name__ == "__main__":
