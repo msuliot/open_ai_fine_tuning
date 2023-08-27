@@ -63,7 +63,7 @@ def main():
     looptime = 0
     while True:
         looptime += 1
-        print(f"Waiting for file to be processed... {looptime}")
+        print(f"Waiting for OpenAI to process the file... {looptime}")
         file_status = openai.File.retrieve(file_id)
         if file_status["status"] == "processed":
             print(f"\nFile processed: {file_status['id']}\n")
@@ -76,7 +76,7 @@ def main():
     model_id = ""
     while True:
         looptime += 1
-        print(f"Waiting for model to be processed... {looptime}")
+        print(f"Waiting for OpenAI to create the model... {looptime}")
         model_status = openai.FineTuningJob.retrieve(fine_tuning_job)
         if model_status["status"] == "succeeded":
             model_id = model_status["fine_tuned_model"]
