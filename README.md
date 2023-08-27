@@ -46,7 +46,7 @@ OPENAI_API_KEY='your key here'
     ```
 
 4. ** Step 4: Create job for Fine Tuned Model at OpenAI **
-    - Using the ID from step 2 or 3, update the "TRAINING_FILE_ID" variable in step3_create_finetuned_model.py
+    - Using the ID from step 2 or 3, update the "TRAINING_FILE_ID" variable in step4_create_finetuned_model.py
     - Run the following command to create your fine tuned model
     ```bash
     python3 step4_create_finetuned_model.py
@@ -55,21 +55,21 @@ OPENAI_API_KEY='your key here'
 5. ** Step 5: Model Validation at OpenAI **
     - You should check the status of your fine tuned model by running the following command
     - You will not be able to proceed to the next step until the status is "succeeded" and Fine Tuned Model has a value.
-    - This could take some time based on where you are in the queue
+    - This could take some time based on where you are in the queue anywhere from 5 minutes to 20 minutes
     - You will also receive an email from OpenAI when the model is ready or run the following command to check the status
     ```bash
     python3 step5_model_validation.py
     ```
 
 6. ** Step 6: Test New Model  **
-    - Using the Fine Tuned Model ID from step 4 or 5, update the "FINE_TUNED_MODEL_ID" variable in step4_test_finetuned_model.py
+    - Using the Fine Tuned Model ID from step 4 or 5, update the "FINE_TUNED_MODEL_ID" variable in step6_test_finetuned_model.py
     - Run the following command to test your new model
     ```bash
     python3 step6_test_finetuned_model.py
     ```
 
 ## Full Automatic
-- Full automatic will run the entire process from start to finish
+- Full automatic will run the entire process from start to finish, You're welcome!
 
     ```bash
     python3 full_automatic.py
