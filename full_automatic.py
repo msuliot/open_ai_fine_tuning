@@ -37,7 +37,7 @@ def test_model(model_id, prompt):
         model=model_id,
         temperature=0.0,
         messages=[
-            {"role": "system", "content": "You are a helpful and professional customer service representative for a multiple listing service"},
+            {"role": "system", "content": "You are a helpful and professional customer service representative"},
             {"role": "user", "content": prompt},
         ]
     )

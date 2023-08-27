@@ -12,7 +12,7 @@ def main():
         model="FINE_TUNED_MODEL_ID",
         temperature=0.0,
         messages=[
-            {"role": "system", "content": "You are a helpful and professional customer service representative for a multiple listing service"},
+            {"role": "system", "content": "You are a helpful and professional customer service representative"},
             {"role": "user", "content": "dude... i forgot my password."},
         ]
     )
