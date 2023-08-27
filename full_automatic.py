@@ -66,7 +66,7 @@ def main():
         print(f"Waiting for file to be processed... {looptime}")
         file_status = openai.File.retrieve(file_id)
         if file_status["status"] == "processed":
-            print(f"\nFile processed: {file_status['id']}")
+            print(f"\nFile processed: {file_status['id']}\n")
             break
         time.sleep(5)
 
