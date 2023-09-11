@@ -1,6 +1,6 @@
 # Open AI Fine Tuning
 
-## Youtube Video Tutorial For this GitHub Repository
+## YouTube Video Tutorial For this GitHub Repository
 [Open AI Fine Tuning](https://youtu.be/Q1VfJwLk3hg)
 
 
