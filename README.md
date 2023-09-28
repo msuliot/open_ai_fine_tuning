@@ -3,7 +3,6 @@
 ## YouTube Video Tutorial For this GitHub Repository
 [Open AI Fine Tuning](https://youtu.be/Q1VfJwLk3hg)
 
-
 ## The basics
 
 1. Must have Python3.
